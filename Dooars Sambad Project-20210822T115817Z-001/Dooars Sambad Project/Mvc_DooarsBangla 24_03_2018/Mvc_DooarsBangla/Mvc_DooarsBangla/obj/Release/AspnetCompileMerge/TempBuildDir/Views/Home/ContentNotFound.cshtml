@@ -1,0 +1,52 @@
+﻿@model Mvc_DooarsBangla.Models.BlockSingleNewsCustomModel
+
+@{
+    ViewBag.Title = "ContentNotFound";
+    Layout = "~/Views/Shared/_myLayout_Home.cshtml";
+}
+
+<section id="contentSection">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="left_content">
+                <div class="single_page">
+                    <div class="error_page g-margin-t-80--xs">
+                        <h3 class="g-font-size-60--xs g-font-weight--700">বিস্তারিত আসছে...</h3>
+                        <div class="g-margin-t-100--xs "></div>
+                        <p class="g-font-weight--700">আপনার এই অসুবিধার জন্য আমরা অত্যন্ত দু:খিত খুব শীঘ্রই আমরা বিস্তারিত সংবাদ আপনার সামনে তুলে ধরবো |</p>
+                        <span></span> <a href="@Url.Action("Index","Home")" class="wow fadeInLeftBig g-margin-t-50--xs">প্রথম পাতা</a>
+                    </div>
+                    @*<div class="social_link g-margin-t-90--xs">
+                        <ul class="sociallink_nav">
+                            <li><a href="https://www.facebook.com/DooarsSambad/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/DooarsSambad"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="mailto:dooarssambad@gmail.com"><i class="fa fa-google"></i></a></li>
+                        </ul>
+                    </div>*@
+
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <aside class="right_content">
+                <div class="single_sidebar">
+                    <h2 class="g-font-weight--600"><span>আকর্ষনীয় খবর</span></h2>
+                    <ul class="spost_nav">
+                        @foreach (var item in Model.PopularList)
+                        {
+                            <li>
+                                <div class="media wow fadeInDown">
+                                    <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="media-left"> <img alt="" src="@Html.DisplayFor(modelItem => item.Section1ImageString)"> </a>
+                                    <div class="media-body"> <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="catg_title"> @Html.DisplayFor(modelItem => item.NewsTitle)</a> </div>
+                                </div>
+                            </li>
+                        }
+
+
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>

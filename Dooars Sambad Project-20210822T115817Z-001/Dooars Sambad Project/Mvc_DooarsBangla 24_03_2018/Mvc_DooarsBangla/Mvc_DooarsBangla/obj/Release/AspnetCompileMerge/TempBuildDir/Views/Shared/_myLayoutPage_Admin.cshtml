@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dooars Sambad</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="author" content="Souvik Saha, Atanu Roy, Subhajit Saha">
+
+
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/font.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/li-scroller.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/style.css">
+    <link href="~/Content/Template/assets/css/global/global.css" rel="stylesheet" />
+    <link rel="icon" href="~/Content/Template/images/icon_dooarsSongbad.png">
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/content/themes/base/css")
+
+
+
+</head>
+<body>
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+    <div class="container">
+        <header id="header">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="header_top">
+                        <div class="header_top_left">
+                            @*<ul class="top_nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="pages/contact.html">Contact</a></li>
+                            </ul>*@
+                            <br/>
+                            <b style="color:white;">Login ID: @User.Identity.Name</b>
+                        </div>
+                        <div class="header_top_right">
+                            <p>@DateTime.Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="header_bottom">
+                        <div class="row">
+                            <div class="col-md-5"><a href="@Url.Action("Index","Admin")"><img style="width:100%" src="~/Content/Template/images/logo_dooarsSongbad.png" alt=""></a></div>
+                            <div class="col-md-7"><a href="#"><img style="width:100%;" src="~/Content/Template/images/addbanner_728x90_V1.jpg" alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="navArea">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav main_nav">
+                        <li class="active"><a class="s-header__nav-menu-link s-header__nav-menu-link-divider" href="@Url.Action( "Index", "Admin")"> <span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">News</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="@Url.Action("NewsUpload", "Admin")">Upload News</a></li>
+                                <li><a href="@Url.Action("AllNews", "Admin")">Update/Delete News</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Marquee News</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="@Url.Action("AddMarqueeNews", "Admin")">Add Marquee News</a></li>
+                                <li><a href="@Url.Action("GetAllMarqueeNews", "Admin")">Upload News To Marquee</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Scroller Image News</a>
+                            <ul class="dropdown-menu" role="menu">
+                               <li class="dropdown"><a href="@Url.Action("AddScrollImages", "Admin")">Upload Scroller Images</a></li>
+                                <li><a href="@Url.Action("GetAllScrollerImage", "Admin")">Upload News To Scroller Images</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="@Url.Action("AddGalleryImages", "Admin")">Add Gallery Images</a></li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">News Paper Page</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown"><a href="@Url.Action("AddNewPaperPage", "Admin")">Add</a></li>
+                                <li><a href="@Url.Action("GetAllNewsPaperPage", "Admin")">Delete</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li><a href="@Url.Action("ShowAllFeedback", "Admin")">Feedback</a></li>
+                        
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="@Url.Action("AddAdmin", "Admin")">Add Admin</a></li>
+                                <li><a href="@Url.Action("GetAdminID", "Admin")">Update Admin</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Profile</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="@Url.Action("UpdatePasswordAdmin", "Admin")">Update Password</a></li>
+                                <li><a href="@Url.Action("Logout", "Admin")">Logout</a></li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+            <div>
+                @RenderBody()
+            </div>
+        </section>
+
+        
+
+        <footer id="footer">
+            
+            <div class="footer_bottom">
+                <p class="copyright">Copyright &copy; 2017 <a href="index.html">DooarsSanbad</a></p>
+                <p class="developer">Developed By Wpfreeware</p>
+            </div>
+        </footer>
+    </div>
+    <script src="~/Content/Template/assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="~/Content/Template/assets/js/wow.min.js"></script>
+    <script src="~/Content/Template/assets/js/bootstrap.min.js"></script>
+    <script src="~/Content/Template/assets/js/slick.min.js"></script>
+    <script src="~/Content/Template/assets/js/jquery.li-scroller.1.0.js"></script>
+    <script src="~/Content/Template/assets/js/jquery.newsTicker.min.js"></script>
+    <script src="~/Content/Template/assets/js/jquery.fancybox.pack.js"></script>
+    <script src="~/Content/Template/assets/js/custom.js"></script>
+</body>
+</html>

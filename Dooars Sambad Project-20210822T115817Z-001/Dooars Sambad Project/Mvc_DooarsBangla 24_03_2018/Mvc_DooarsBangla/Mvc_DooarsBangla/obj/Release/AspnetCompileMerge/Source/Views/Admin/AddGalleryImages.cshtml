@@ -1,0 +1,110 @@
+﻿@model Mvc_DooarsBangla.Models.PhotoGalleryModel
+
+@{
+    ViewBag.Title = "AddGalleryImages";
+    Layout = "~/Views/Shared/_myLayoutPage_Admin.cshtml";
+}
+
+<script>
+    $(document).on('invalid-form.validate', 'form', function () {
+        var button = $(this).find('input[type="submit"]');
+        setTimeout(function () {
+            button.removeAttr('disabled');
+        }, 1);
+    });
+    $(document).on('submit', 'form', function () {
+        var button = $(this).find('input[type="submit"]');
+        setTimeout(function () {
+            button.attr('disabled', 'disabled');
+        }, 0);
+    });
+</script>
+
+
+
+
+
+
+
+<div class="jumbotron" style="background-color:#f5fffa">
+    @using (Html.BeginForm("AddGalleryImages", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <center> <legend><h2>Enter Gallery Image Details</h2></legend></center>
+
+            @*<div class="editor-label">
+                    @Html.LabelFor(model => model.ScrlImageID)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.ScrlImageID)
+                    @Html.ValidationMessageFor(model => model.ScrlImageID)
+                </div>*@
+            <table align="center" style="width:80%" class="g-margin-b-50--lg g-margin-b-50--xs">
+                <tr>
+                    <td>
+                        <div class="form-groupl">
+                            @Html.LabelFor(model => model.ImageTitle)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.ImageTitle, new { @class = "form-control", @placeholder = "Max 150 Character" })
+
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red">
+                            @Html.ValidationMessageFor(model => model.ImageTitle)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="color:red"><b>@ViewBag.Error</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.file)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.file, new { type = "file", @class = "form-control" })
+
+                        </div>
+                    </td>
+                    <td><b style="color:red">@Html.ValidationMessageFor(model => model.file)</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Position)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.DropDownList("Position", ViewBag.PositionSelection as List<SelectListItem>, new { @class = "form-control" })
+
+                        </div>
+                    </td>
+                    <td><b style="color:red">@Html.ValidationMessageFor(model => model.Position)</b></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="form-group">
+                            <input type="submit" value="Submit" class="btn-primary" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    }
+</div>

@@ -1,0 +1,319 @@
+﻿@model Mvc_DooarsBangla.Models.AllNewsTableModel
+
+@{
+    ViewBag.Title = "UpdateNews";
+    Layout = "~/Views/Shared/_myLayoutPage_Admin.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var datetoday = new Date();
+        $("#NewsDate").datepicker({
+            dateFormat: "mm/dd/yy",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-60:+0"
+        });
+
+    })
+</script>
+<div class="jumbotron" style="background-color:#f5fffa">
+
+    @using (Html.BeginForm("UpdateNews", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend><center><h2>Update News Details</h2></center></legend>
+
+
+            <table class="g-margin-b-50--xs" align="center" style="width:70%">
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NewsID)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBox("NewsID", (String)ViewBag.NewsID, new { @class = "form-control", @readonly = "readonly" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.NewsID)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NewsTitle)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBox("NewsTitle", (String)ViewBag.ttle, new { @class = "form-control", @placeholder = "Max 80 Character" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.NewsTitle)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.category)
+                        </div>
+
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.DropDownList("category", ViewBag.cat as List<SelectListItem>, new { @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.category)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Section1Description)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextArea("Section1Description", (String)ViewBag.des1, new { @class = "form-control", @placeholder = "Max 4000 Character" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.Section1Description)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="color:red"><b>@ViewBag.Error1</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Section1ImageFile)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.Section1ImageFile, new { type = "file", @class = "form-control" })
+                        </div>
+                    </td>
+
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.Section1ImageFile)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Section2Description)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextArea("Section2Description", (String)ViewBag.des2, new { @class = "form-control", @placeholder = "Max 3500 Character" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.Section2Description)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="color:red"><b>@ViewBag.Error2</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Section2ImageFile)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.Section2ImageFile, new { type = "file", @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.Section2ImageFile)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Section3Description)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextArea("Section3Description", (String)ViewBag.des3, new { @class = "form-control", @placeholder = "Max 3000 Character" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.Section3Description)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="color:red"><b>@ViewBag.Error3</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Section3ImageFile)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.Section3ImageFile, new { type = "file", @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.Section3ImageFile)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.IsLatest)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.DropDownList("IsLatest", ViewBag.yesno as List<SelectListItem>, new { @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.IsLatest)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.IsPopular)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.DropDownList("IsPopular", ViewBag.yesno as List<SelectListItem>, new { @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.IsPopular)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PriorityOfNews)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.DropDownList("PriorityOfNews", ViewBag.yesno as List<SelectListItem>, new { @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.PriorityOfNews)
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NewsDate)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBox("NewsDate", (string)ViewBag.dt, new { @class = "form-control", @readonly = "readonly", placeholder = "mm/dd/yyyy" })
+
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.NewsDate)
+                        </b>
+                    </td>
+                </tr>
+                @*@if (@ViewBag.mID != 1000)
+                    {
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.MarqueeNewsID)
+                                </div>
+
+                            </td>
+                            <td>
+                                <div class="form-group">
+
+
+                                    @Html.TextBox("MarqueeNewsID", (int)@ViewBag.mID, new { @class = "form-control", @readonly = "readonly", placeholder = "N/A" })
+
+
+
+
+                                </div>
+                            </td>
+                            <td>
+                                <b style="color:red;">
+                                    @Html.ValidationMessageFor(model => model.MarqueeNewsID)
+                                </b>
+                            </td>
+                        </tr>
+                    }*@
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input class="btn-primary" type="submit" value="Update" />
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset>
+    }
+</div>

@@ -1,0 +1,90 @@
+﻿@model Mvc_DooarsBangla.Models.AddFeedBackModel
+
+<script>
+    function sentFeedback() {
+        alert("Thanks for your feedback!");
+        location.reload(true);
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#submitButton").on("click", function (e) {
+            var res = document.getElementById('fdName').value;
+            var num = document.getElementById('fdContactNumber').value;
+            var msg = document.getElementById('fdMessage').value;
+            var re = /^[a-z A-Z]+$/;
+
+            if ((res == "") || isNaN(res) || (num < 1111111111) || (num > 9999999999) || (num == "") || (msg == "") || (!res.match(re))) {
+                if ((res == "") || (!res.match(re))) {
+                    e.preventDefault();
+                    alert("invalid Name(alphabetical letters only) ");
+                }
+
+                else {
+                    if (Math.floor(num) != num || isNaN(num) || (num < 1111111111) || (num > 9999999999) || (num == "")) {
+                        e.preventDefault();
+                        alert("Invalid  phone number(10 digit only)");
+                    }
+                    else {
+                        if ((res != "") && (num != "")) {
+                            if ((msg == "")) {
+                                e.preventDefault();
+                                alert("Invalid feedback(Minimum 140 character)");
+                            }
+                        }
+
+                    }
+                }
+
+
+
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+@*@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/jqueryui")
+@Styles.Render("~/content/themes/base/css")*@
+
+
+@using (Ajax.BeginForm("SendFeedbackForm", "Home", new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.InsertBefore, UpdateTargetId = "show", OnSuccess = "sentFeedback" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+    <fieldset>
+        <div class="editor-field">
+            <input type="text" name="Name" id="fdName" class="form-control " placeholder="* Full Name" required maxlength="30">
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <br/>
+     
+        <div class="editor-field">
+            <input type="text" name="contactNumber" id="fdContactNumber" class="form-control " placeholder="* Contact Number" required maxlength="10">
+            @Html.ValidationMessageFor(model => model.contactNumber)
+        </div>
+        <br/>
+
+        <div class="editor-field">
+            <textarea name="Message" id="fdMessage" class="form-control " rows="10" placeholder="* What do you feel about us?" required maxlength="140"></textarea>
+            @Html.ValidationMessageFor(model => model.Message)
+        </div>
+        <br/>
+        <p>
+            @*<input type="submit" value="Create" />*@
+            <button type="submit" id="submitButton" class="text-uppercase btn btn-theme g-radius--50 g-padding-x-70--xs g-margin-b-20--xs">Submit</button>
+        </p>
+    </fieldset>
+}
+

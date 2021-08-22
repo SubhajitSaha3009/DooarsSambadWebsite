@@ -1,0 +1,211 @@
+﻿@model Mvc_DooarsBangla.Models.MyCustomHomeModel
+
+@{
+    ViewBag.Title = "GetAllMarqueeNews";
+    Layout = "~/Views/Shared/_myLayout_Home.cshtml";
+}
+<link href="~/Content/Scrollbar.css" rel="stylesheet" />
+<script>
+    home();
+</script>
+
+<section id="newsSection">
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="latest_newsarea">
+                <span>একনজরে</span>
+                <ul id="ticker01" class="news_sticker">
+                    @foreach (var item in Model.MarqueeList)
+                    {
+                        <li><a href="@Url.Action("MarqueeRedirection", "Home", new { mID = item.MarqueeNewsID })">@Html.DisplayFor(modelItem => item.MarqueeDescription, new { @color = "white" })</a></li>
+                        @*@Html.DisplayFor(modelItem => item.MarqueeDescription, new { @color="white"})*@
+                    }
+                </ul>
+                <div class="social_area">
+                    <ul class="social_nav">
+                        <li class="facebook"><a href="https://www.facebook.com/DooarsSambad/" target="_blank"></a></li>
+                        <li class="twitter"><a href="https://twitter.com/DooarsSambad" target="_blank"></a></li>
+                        @*<li class="flickr"><a href="#"></a></li>
+                        <li class="pinterest"><a href="#"></a></li>
+                        <li class="googleplus"><a href="#"></a></li>
+                        <li class="vimeo"><a href="#"></a></li>*@
+                        <li class="youtube"><a href="https://www.youtube.com/channel/UCxBXuQEVgUDYfdv_QV1hLpA?disable_polymer=true" target="_blank"></a></li>
+                        <li class="mail"><a href="mailto:dooarssambad@gmail.com" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sliderSection">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="slick_slider">
+                @foreach (var item in Model.ScrollerList)
+                {
+                    <div class="single_iteam">
+
+
+                        <a href="@Url.Action("ScrollerRedirection", "Home", new { sID = item.ScrlImageID })"> <img src="@Html.DisplayFor(modelItem => item.ImageAddress)" alt=""></a>
+                        <div class="slider_article">
+                            <h2><a class="slider_tittle" href="@Url.Action("ScrollerRedirection", "Home", new { sID = item.ScrlImageID })">@Html.DisplayFor(modelItem => item.ImageHeader)</a></h2>
+                            <p>@Html.DisplayFor(modelItem => item.ImageDesc)...</p>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="latest_post">
+                <h2 class="g-font-weight--600"><span>সর্বশেষ সংযোজন</span></h2>
+                <div class="latest_post_container" style="overflow-y:hidden">
+                    <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
+                    <ul class="latest_postnav">
+                        @foreach (var item in Model.LatestList)
+                        {
+                            <li>
+                                <div class="media">
+                            <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="media-left"> <img alt="" src="@Html.DisplayFor(modelItem => item.Section1ImageString)"> </a>
+                            <div class="media-body"> <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="catg_title">@Html.DisplayFor(modelItem => item.NewsTitle)</a> </div>
+                                 </div>
+                            </li>
+                        }
+                        
+                        
+                    </ul>
+                    <div id="next-button"><i class="fa  fa-chevron-down"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contentSection">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="left_content">
+                <div class="single_post_content">
+                    <h2 class="g-font-weight--600"><span>আলোকচিত্র প্রদর্শনী</span></h2>
+                    <ul class="photograph_nav  wow fadeInDown">
+                        @foreach (var item1 in Model.PhotoGallery)
+                        {
+                            <li>
+                                <div class="photo_grid">
+                                    <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="@Html.DisplayFor(modelItem => item1.ImageAddress)" title="@Html.DisplayFor(modelItem => item1.ImageTitle)"> <img src="@Html.DisplayFor(modelItem => item1.ImageAddress)" alt="" /></a> </figure>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-sm-12"><a href="#"><img style="height:90px;width:100%;" src="" alt=""></a></div>
+                </div>
+                <div class="row g-margin-b-20--xs">
+                    <div class="col-sm-12"><a href="#"><img style="height:90px;width:100%;" src="" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <aside class="right_content">
+                <div class="single_sidebar">
+                    <h2 class="g-font-weight--600"><span>আকর্ষনীয় খবর</span></h2>
+                    <ul class="spost_nav">
+                        @foreach (var item in Model.PopularList)
+                        {
+                            <li>
+                                <div class="media wow fadeInDown">
+                                    <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="media-left"> <img alt="" src="@Html.DisplayFor(modelItem => item.Section1ImageString)"> </a>
+                                    <div class="media-body"> <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="catg_title"> @Html.DisplayFor(modelItem => item.NewsTitle)</a> </div>
+                                </div>
+                            </li>
+                        }
+
+
+                    </ul>
+                </div>
+                <div class="single_sidebar">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">E-পেপার</a></li>
+                        <li role="presentation"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">Video</a></li>
+                        <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">Comments</a></li>
+                    </ul>
+                    <div class="tab-content">
+                     
+                        <div role="tabpanel" class="tab-pane active" id="category">
+                            <ul>
+                                @for (int i = 1; i <= Convert.ToInt32(@ViewBag.c); i++)
+                                {
+                                    <li class="cat-item"><a href="@Url.Action("E_paper", "Home", new { pNo = i })">Page- @i</a></li>
+                                }
+
+                                @*<li class="cat-item"><a href="#">Sports</a></li>
+                                <li class="cat-item"><a href="#">Fashion</a></li>
+                                <li class="cat-item"><a href="#">Business</a></li>
+                                <li class="cat-item"><a href="#">Technology</a></li>
+                                <li class="cat-item"><a href="#">Games</a></li>
+                                <li class="cat-item"><a href="#">Life &amp; Style</a></li>
+                                <li class="cat-item"><a href="#">Photography</a></li>*@
+                            </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="video">
+                            <div class="vide_area">
+                                <iframe width="100%" height="250" src="" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="comments">
+
+
+
+
+                            <div class="row ">
+                                <div style="height:200px;" class="g-bg-color--sky-light Scroll col-xs-10 col-xs-offset-1">
+                                    <table class="table table-hover ">
+                                        @foreach (var item in Model.listFeedback)
+                                        {
+                                            <tr class="DarkShadow">
+                                                <td>
+                                                    <table style="width:100%;">
+                                                        <tr>
+                                                            <td>
+                                                               <i>@Html.DisplayFor(modelItem => item.Message)</i> 
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pull-right">
+                                                                <strong style="color:aqua">@Html.DisplayFor(modelItem => item.Name) </strong>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                            <tr class="g-height-15--xs"></tr>
+                                        }
+                                    </table>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </aside>
+        </div>
+    </div>
+</section>

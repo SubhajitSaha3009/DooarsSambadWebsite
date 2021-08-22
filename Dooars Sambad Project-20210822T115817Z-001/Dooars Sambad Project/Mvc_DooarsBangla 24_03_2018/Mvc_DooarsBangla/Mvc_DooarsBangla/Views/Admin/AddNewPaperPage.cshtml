@@ -1,0 +1,85 @@
+﻿@model Mvc_DooarsBangla.Models.NewsPaperPageModel
+
+@{
+    ViewBag.Title = "AddNewPaperPage";
+    Layout = "~/Views/Shared/_myLayoutPage_Admin.cshtml";
+}
+
+<script>
+    $(document).on('invalid-form.validate', 'form', function () {
+        var button = $(this).find('input[type="submit"]');
+        setTimeout(function () {
+            button.removeAttr('disabled');
+        }, 1);
+    });
+    $(document).on('submit', 'form', function () {
+        var button = $(this).find('input[type="submit"]');
+        setTimeout(function () {
+            button.attr('disabled', 'disabled');
+        }, 0);
+    });
+</script>
+
+
+
+<div class="jumbotron" style="background-color:#f5fffa">
+
+    @using (Html.BeginForm("AddNewPaperPage", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <center> <legend><h2>Enter News Paper Page Details</h2></legend></center>
+            <table align="center" style="width:60%">
+                <tr>
+                    <td></td>
+                    <td style="color:red"><b>@ViewBag.Error</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.file)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.file, new {type="file", @class = "form-control" })
+
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red">@Html.ValidationMessageFor(model => model.file)</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PageNumber)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.DropDownList("PageNumber", ViewBag.PageNumberSelection as List<SelectListItem>, new { @class = "form-control" })
+
+                        </div>
+
+                    </td>
+                    <td>
+                        <b style="color:red">@Html.ValidationMessageFor(model => model.PageNumber)</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Submit" class="btn-primary" />
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset>
+    }
+</div>
+

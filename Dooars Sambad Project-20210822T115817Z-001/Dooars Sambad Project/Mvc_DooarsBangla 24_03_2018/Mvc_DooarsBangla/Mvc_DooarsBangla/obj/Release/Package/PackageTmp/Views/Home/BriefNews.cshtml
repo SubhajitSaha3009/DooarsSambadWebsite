@@ -1,0 +1,175 @@
+﻿@model Mvc_DooarsBangla.Models.BlockSingleNewsCustomModel
+
+@{
+    ViewBag.Title = "BriefNews";
+    Layout = "~/Views/Shared/_myLayout_Home_Bnews.cshtml";
+}
+
+@section metatags{
+<meta name="description" content="@ViewBag.Desc">
+<meta property="og:title" content="@ViewBag.Title1" />
+<meta property="og:description" content="@ViewBag.Desc" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="@ViewBag.Url" />
+<meta property="og:site_name" content="Dooars Sambad" />
+<meta property="og:image" content="@ViewBag.image" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="Dooars Sambad" />
+<meta name="twitter:title" content="@ViewBag.Title1" />
+<meta name="twitter:description" content="@ViewBag.Desc" />
+<meta name="twitter:image:src" content="@ViewBag.image" />
+<meta name="twitter:url" content="@ViewBag.Url" />
+
+
+
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+
+
+
+<section id="contentSection">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="left_content">
+                <div class="single_page">
+
+                    <h1 class="g-font-size-44--xs g-font-weight--700">@Model.fullNews.NewsTitle</h1>
+                    <div class="post_commentbox"> <span><i class="fa fa-calendar"></i>@Model.fullNews.NewsDate</span> <i class="fa fa-tags"></i>@Model.fullNews.category </div>
+                    <div class="single_page_content">
+                        <div class="row g-margin-b-40--xs g-margin-t-20--xs">
+                            <div class="col-xs-12">
+                                @if (@Model.fullNews.Section == 1)
+                                {
+                                    <iframe width="100%" height="315" src="@Model.fullNews.IFrameAddress" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                }
+                                else
+                                {
+                                    <img style="width:100%;height:100%" class="img-thumbnail" src="@Model.fullNews.Section1ImageString">
+                                }
+                               
+
+                            </div>
+                        </div>
+                        <p class="g-font-size-30--xs">@Model.fullNews.Section1Description</p>
+                        @if (@Model.fullNews.Section2ImageString != null || @Model.fullNews.Section==2)
+                        {
+
+                            <div class="row g-margin-b-40--xs g-margin-t-20--xs">
+                                <div class="col-xs-12">
+                                    @if (@Model.fullNews.Section == 2)
+                                    {
+                                        <iframe width="100%" height="315" src="@Model.fullNews.IFrameAddress" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                    }
+                                    else
+                                    {
+                                        <img style="width:100%;height:100%" class="img-thumbnail" src="@Model.fullNews.Section2ImageString">
+                                    }
+                                   
+
+                                </div>
+                            </div>
+                        }
+                        @if (@Model.fullNews.Section2Description != null || @Model.fullNews.Section == 2)
+                        {
+                            <p class="g-font-size-30--xs">@Model.fullNews.Section2Description</p>
+                        }
+                        @if (@Model.fullNews.Section3ImageString != null)
+                        {
+                            <div class="row g-margin-b-40--xs g-margin-t-20--xs">
+                                <div class="col-xs-12">
+                                    @if (@Model.fullNews.Section == 3)
+                                    {
+                                        <iframe src="@Model.fullNews.IFrameAddress" width="100%" height="315" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                    }
+                                    else
+                                    {
+                                        <img style="width:100%;height:100%" class="img-thumbnail" src="@Model.fullNews.Section3ImageString">
+                                    }
+                                    
+
+                                </div>
+                            </div>
+                        }
+                        @if (@Model.fullNews.Section3Description != null)
+                        {
+                            <p class="g-font-size-30--xs">@Model.fullNews.Section3Description</p>
+                        }
+                        
+                    </div>
+                    
+                    <div class="social_link">
+                        <div class="row">
+                            <center> <p class="g-font-size-44--xs g-font-weight--700" style="font-family:Cooper"> Sharing is Awesome</p></center>
+                        </div>
+                        <ul class="sociallink_nav">
+                            <li><div class="fb-share-button" data-href="http://www.dooarssambad.in/Home/BriefNews/@Model.fullNews.NewsID" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"></a></div></li>
+                            <li><a target="_blank" class="fa fa-twitter" href="https://twitter.com/intent/tweet?text=http://www.dooarssambad.in/Home/BriefNews/@Model.fullNews.NewsID" data-size="large"></a></li>
+                            <li><a target="_blank" class="fa fa-google-plus" href="https://plus.google.com/share?url=http://www.dooarssambad.in/Home/BriefNews/@Model.fullNews.NewsID"></a></li>
+                            @*<li><a target="_blank" class="fa fa-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.dooarssambad.in/Home/BriefNews/@Model.fullNews.NewsID"></a></li>*@
+                            <li><a target="_blank" class="fa fa-whatsapp" href="https://api.whatsapp.com//send?text=http://www.dooarssambad.in/Home/BriefNews/@Model.fullNews.NewsID" data-action="share/whatsapp/share"></a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <nav class="nav-slit">
+          @if(@Model.prevnxtList.NewsID!=null)
+          {
+            <a class="prev" href="@Url.Action("BriefNews", "Home", new { id = @Model.prevnxtList.NewsID })">
+                <span class="icon-wrap"><i class="fa fa-angle-left"></i></span>
+                <div>
+                    <h3>@Model.prevnxtList.NewsTitle ...</h3>
+                    <img src="@Model.prevnxtList.ImageAddress" alt="no" />
+                </div>
+            </a>
+            
+            <a class="next" href="@Url.Action("BriefNews", "Home", new { id = @Model.prevnxtList.NewsID1 })">
+                <span class="icon-wrap"><i class="fa fa-angle-right"></i></span>
+                <div>
+                    <h3>@Model.prevnxtList.NewsTitle1 ...</h3>
+                    <img src="@Model.prevnxtList.ImageAddress1" alt="no" />
+                </div>
+            </a>
+          }
+        </nav>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <aside class="right_content">
+                <div class="single_sidebar">
+                    <h2 class="g-font-weight--600"><span>প্রাসঙ্গিক খবর</span></h2>
+                    <ul class="spost_nav">
+                        @foreach (var item in Model.PopularList)
+                        {
+                            <li>
+                                <div class="media wow fadeInDown">
+                                    <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="media-left"> <img alt="" src="@Html.DisplayFor(modelItem => item.Section1ImageString)"> </a>
+                                    <div class="media-body"> <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="catg_title"> @Html.DisplayFor(modelItem => item.NewsTitle)</a> </div>
+                                </div>
+                            </li>
+                        }
+
+
+                    </ul>
+                </div>
+                
+
+            </aside>
+        </div>
+    </div>
+</section>

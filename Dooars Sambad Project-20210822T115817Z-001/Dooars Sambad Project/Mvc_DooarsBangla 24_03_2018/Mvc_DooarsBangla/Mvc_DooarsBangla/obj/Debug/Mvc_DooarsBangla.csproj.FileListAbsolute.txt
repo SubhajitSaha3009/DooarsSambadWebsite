@@ -1,0 +1,118 @@
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.dll.config
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.pdb
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Antlr3.Runtime.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\EntityFramework.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Microsoft.Web.Infrastructure.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Newtonsoft.Json.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Mvc.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Optimization.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Providers.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Razor.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Deployment.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Razor.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\WebGrease.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\EntityFramework.xml
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Newtonsoft.Json.xml
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Mvc.xml
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Razor.xml
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.xml
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Deployment.xml
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Razor.xml
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.csprojResolveAssemblyReference.cache
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.dll
+E:\news website\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.pdb
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.dll.config
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.pdb
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Antlr3.Runtime.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\EntityFramework.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Microsoft.Web.Infrastructure.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Newtonsoft.Json.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Net.Http.Formatting.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Http.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Http.WebHost.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Mvc.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Optimization.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Providers.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Razor.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Deployment.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Razor.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\WebGrease.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\EntityFramework.xml
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Newtonsoft.Json.xml
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Net.Http.Formatting.xml
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Http.xml
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Http.WebHost.xml
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Mvc.xml
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Razor.xml
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.xml
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Deployment.xml
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Razor.xml
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.csprojResolveAssemblyReference.cache
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.pdb
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.dll.config
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.pdb
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Antlr3.Runtime.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\EntityFramework.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Newtonsoft.Json.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Mvc.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Optimization.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Providers.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Razor.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Razor.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\WebGrease.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\EntityFramework.xml
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Newtonsoft.Json.xml
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Mvc.xml
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Razor.xml
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.xml
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Razor.xml
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.csprojResolveAssemblyReference.cache
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.dll
+C:\Users\Atanu\Desktop\Project News\Doars Bangla\Mvc_DooarsBangla\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.pdb
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\PagedList.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\PagedList.Mvc.dll
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\PagedList.xml
+D:\EDU\iNautix\internship\MVC Home\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\PagedList.Mvc.xml
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.dll.config
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Mvc_DooarsBangla.pdb
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Antlr3.Runtime.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\EntityFramework.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Microsoft.Web.Infrastructure.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Newtonsoft.Json.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\PagedList.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\PagedList.Mvc.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Mvc.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Optimization.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Providers.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Razor.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Deployment.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Razor.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\WebGrease.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\PagedList.xml
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\PagedList.Mvc.xml
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\EntityFramework.xml
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\Newtonsoft.Json.xml
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Mvc.xml
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.Razor.xml
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.xml
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Deployment.xml
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\bin\System.Web.WebPages.Razor.xml
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.csprojResolveAssemblyReference.cache
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.dll
+E:\Dooars Bangla\Mvc_DooarsBangla final 25-02\Mvc_DooarsBangla\Mvc_DooarsBangla\obj\Debug\Mvc_DooarsBangla.pdb

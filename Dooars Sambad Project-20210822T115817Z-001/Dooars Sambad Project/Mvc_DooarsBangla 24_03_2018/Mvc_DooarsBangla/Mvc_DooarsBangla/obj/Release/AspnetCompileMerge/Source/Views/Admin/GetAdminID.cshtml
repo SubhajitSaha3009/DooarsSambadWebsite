@@ -1,0 +1,60 @@
+﻿@model Mvc_DooarsBangla.Models.GetAdminIDModel
+
+@{
+    ViewBag.Title = "GetAdminID";
+    Layout = "~/Views/Shared/_myLayoutPage_Admin.cshtml";
+}
+
+
+<script>
+    $(document).on('invalid-form.validate', 'form', function () {
+        var button = $(this).find('input[type="submit"]');
+        setTimeout(function () {
+            button.removeAttr('disabled');
+        }, 1);
+    });
+    $(document).on('submit', 'form', function () {
+        var button = $(this).find('input[type="submit"]');
+        setTimeout(function () {
+            button.attr('disabled', 'disabled');
+        }, 0);
+    });
+</script>
+
+
+
+
+
+
+<div class="jumbotron" style="background-color:#f5fffa">
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <center><legend><h2>Update Admin Profile</h2></legend></center> 
+
+            <table align="center">
+                <tr>
+                    <td>
+                        <b style="color:red;">@Html.ValidationMessageFor(model => model.adminID)</b><i style="color:red;font-size:15px">@ViewBag.rmsg</i>
+                    </td>
+                </tr>
+                <tr>
+
+
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.adminID, new { @class = "form-control s-form-v1__input g-radius--left-50", placeholder = "*Admin ID" })
+                        </div>
+                    </td>
+                    <td><div class="form-group"><input type="submit" value="Proceed" class="btn btn-green g-radius--right-50" style="margin-top:5px" /></div></td>
+
+                </tr>
+            </table>
+        </fieldset>
+    }
+</div>

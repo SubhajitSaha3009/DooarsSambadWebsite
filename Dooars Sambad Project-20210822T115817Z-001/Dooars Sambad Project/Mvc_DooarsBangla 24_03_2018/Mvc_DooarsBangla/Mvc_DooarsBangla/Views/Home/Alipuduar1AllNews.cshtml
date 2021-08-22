@@ -1,0 +1,48 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<Mvc_DooarsBangla.Models.AllNewsTableModel>
+
+@{
+    ViewBag.Title = "Alipuduar1AllNews";
+    Layout = "~/Views/Shared/_myLayout_Home.cshtml";
+}
+
+<script>
+    alipurduar1();
+</script>
+
+<div class="col-xs-12 g-bg-color--white">
+    @foreach (var item in Model)
+    {
+
+
+        <div class="col-sm-6">
+            <div class="col-sm-12 DarkShadow g-bg-color--sky-light g-height-300--lg">
+                <div class="row">
+                    <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })">
+                        <div class="col-sm-5 col-xs-12 g-height-250--xs">
+                            <img style="height:100%;" class="img-thumbnail" src="@item.Section1ImageString" />
+                        </div>
+                    </a>
+
+                    <div class="col-sm-7 col-xs-12">
+                        <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })">
+                            <p><h4 class="g-font-size-32--xs g-font-weight--700">@Html.DisplayFor(modelItem => item.NewsTitle)</h4></p>
+                        </a>
+                        <span class="g-font-size-18--xs"><i class="fa fa-calendar"></i>&nbsp;&nbsp;@Html.DisplayFor(modelItem => item.NewsDate)</span>
+                        <p class="g-font-size-22--xs">
+                            @Html.DisplayFor(modelItem => item.Section1Description)
+                        </p>
+                        <p class="pull-right g-font-size-26--xs">
+                            <a style="color:blue;" href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })">সবিস্তারে..</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="row">
+    <center> @Html.PagedListPager(Model, pageNo => @Url.Action("Alipuduar1AllNews", new { pageNo }))</center>
+</div>

@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dooars Sambad</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="keywords" content="Dooars Sambad, Bengali News, Dooars, Dooars News, Bengali News dooars, ডুয়ার্স, ডুয়ার্স সংবাদ, সংবাদ, Souvik Saha, Atanu Roy, Subhajit Saha, News, Falakata, Alipurduar, Kumargram, Kalchini, Madarihaat, Birpara  " />
+    <meta name="author" content="Souvik Saha, Atanu Roy, Subhajit Saha">
+    <meta name="author" content="Subhajit Saha" />
+    <meta name="author" content="Souvik Saha" />
+    <meta name="author" content="Atanu roy" />
+    @RenderSection("metatags",required:false)
+
+
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/font.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/li-scroller.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Template/assets/css/style.css">
+    <link href="~/Content/Template/assets/css/global/global.css" rel="stylesheet" />
+    <link href="~/Content/Template/assets/css/MyStyle.css" rel="stylesheet" />
+    <link rel="icon" href="~/Content/Template/images/icon_dooarsSongbad.png">
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.min.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/content/themes/base/css")
+
+    <script>
+        function home() {
+            $("#home").addClass('active');
+        }
+        function falakata() {
+            $("#fkt").addClass('active');
+        }
+        function madarihat() {
+            $("#mb").addClass('active');
+        }
+        function kumar() {
+            $("#kumar").addClass('active');
+        }
+       function alipurduar1(){
+           $("#alp1").addClass('active');
+       }
+       function alipurduar2() {
+           $("#alp2").addClass('active');
+       }
+       function kal() {
+           $("#kal").addClass('active');
+       }
+       function bbd() {
+           $("#bbd").addClass('active');
+       }
+       function aamarDooars() {
+           $("#adr").addClass('active');
+       }
+    </script>
+
+</head>
+<body>
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+    <div class="container">
+        <header id="header">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="header_top">
+                        <div class="header_top_left">
+                            <ul class="top_nav">
+                                <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                                <li><a href="@Url.Action("ContactUS","Home")">About</a></li>
+                            </ul>
+                        </div>
+                        <div class="header_top_right">
+                            <p>@DateTime.Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="header_bottom">
+                        <div class="row">
+                            <div class="col-sm-5"><a href="@Url.Action("Index","Home")"><img style="width:100%" src="~/Content/Template/images/logo_dooarsSongbad.png" alt=""></a></div>
+                            <div class="col-sm-7"><a href="#"><img style="width:100%;" src="" alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="navArea">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav main_nav">
+                        <li id="home"><a class=" s-header__nav-menu-link s-header__nav-menu-link-divider" href="@Url.Action( "Index", "Home")"> <span class="fa fa-home fa-2x desktop-home"></span><span class="mobile-show">Home</span></a></li>
+                        <li id="fkt"><a href="@Url.Action("FalakataAllNews","Home")">ফালাকাটা</a></li>
+                        <li id="mb"><a href="@Url.Action("MadarihatAllNews","Home")">মাদারিহাট-বীরপাড়া</a></li>
+                        <li id="kumar"><a href="@Url.Action("KumargramAllNews","Home")">কুমারগ্রাম</a></li>
+                        <li id="alp1"><a href="@Url.Action("Alipuduar1AllNews","Home")">আলিপুরদুয়ার-১</a></li>
+                        <li id="alp2"><a href="@Url.Action("Alipuduar2AllNews", "Home")">আলিপুরদুয়ার-২</a></li>
+                        <li id="kal"><a href="@Url.Action("KalchiniAllNews","Home")">কালচিনি</a></li>
+                        <li id="adr"><a href="@Url.Action("AamarDooarsAllNews", "Home")">আমার ডুয়ার্স</a></li>
+                        <li id="bbd"><a href="@Url.Action("BibidhaAllNews","Home")">বিবিধ</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+           
+        </section>
+
+
+        @RenderBody()
+          
+        
+
+
+        <footer id="footer">
+            <div class="footer_top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="footer_widget  wow fadeInDown ">
+                            <h2>বিশেষ বিজ্ঞপ্তি </h2>
+                            <p style="text-align:justify;">ডুয়ার্স সংবাদ ওয়েবসাইটে প্রকাশিত বিজ্ঞাপনের এবং খবরের বিষয়বস্তু ও যথাযথতার যাবতীয় দায়িত্ব বিজ্ঞাপনদাতার এবং সাংবাদিকের। কোনো সংস্থার বিজ্ঞাপন, খবর অাইনী সমস্যা সৃষ্টি করলে বা, কারো আর্থিক ক্ষতির জন্য দায়ী হলে, তার যাবতীয় দায় দায়ীত্ব, পুরোপুরি বিজ্ঞাপনদাতা এবং সংবাদদাতার ওপরই বর্তাবে। ডুয়ার্স সংবাদ তার জন্য কোনোভাবেই দায়ী নয়।</p>
+
+                            <h3>- সম্পাদক</h3>
+                            <p>ডুয়ার্স সংবাদ </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="footer_widget wow fadeInDown">
+                            <h2>ব্লক</h2>
+                            <ul class="tag_nav">
+                                <li><a href="@Url.Action("FalakataAllNews","Home")">ফালাকাটা</a></li>
+                                <li><a href="@Url.Action("MadarihatAllNews","Home")">মাদারিহাট-বীরপাড়া</a></li>
+                                <li><a href="@Url.Action("KumargramAllNews","Home")">কুমারগ্রাম</a></li>
+                                <li><a href="@Url.Action("Alipuduar1AllNews", "Home")">আলিপুরদুয়ার-১</a></li>
+                                <li><a href="@Url.Action("Alipuduar2AllNews", "Home")">আলিপুরদুয়ার-২</a></li>
+                                <li><a href="@Url.Action("KalchiniAllNews", "Home")">কালচিনি</a></li>
+                                <li><a href="@Url.Action("AamarDooarsAllNews", "Home")">আমার ডুয়ার্স</a></li>
+                                <li><a href="@Url.Action("BibidhaAllNews", "Home")">বিবিধ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="footer_widget  wow fadeInDown">
+                            <h2>Contact</h2>
+                            <p style="font-size:17px;">If you have any queries, please do not hesitate to contact us.</p>
+                            <br />
+                            <address>
+                                <p style="font-size:17px;" class="fa fa-map-marker visible-xs ">&nbsp; Falakata, Alipurduar, West Bengal-735211</p>
+                                <p style="font-size:17px;" class="fa fa-map-marker hidden-xs ">&nbsp;&nbsp;&nbsp; Falakata, Alipurduar, West Bengal-735211</p>
+                                <p style="font-size:17px;" class="fa fa-envelope  ">&nbsp; contact@dooarssambad.in</p><br />
+                                <p style="font-size:17px;" class="fa fa-mobile  ">&nbsp;&nbsp;&nbsp; +91-9641042516 </p>
+                                
+                                <br />
+
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <p class="copyright">Copyright &copy; 2018 <a href="@Url.Action("Index","Home")">DooarsSambad</a></p>
+                <p class="pull-right"><b><a style="color:white" href="@Url.Action("GetDevelopers","Home")" target="_blank">Developers Group</a></b></p>
+            </div>
+        </footer>
+    </div>
+    <script src="~/Content/Template/assets/js/jquery.min.js"></script>
+    <script src="~/Content/Template/assets/js/wow.min.js"></script>
+    <script src="~/Content/Template/assets/js/bootstrap.min.js"></script>
+    <script src="~/Content/Template/assets/js/slick.min.js"></script>
+    <script src="~/Content/Template/assets/js/jquery.li-scroller.1.0.js"></script>
+    <script src="~/Content/Template/assets/js/jquery.newsTicker.min.js"></script>
+    <script src="~/Content/Template/assets/js/jquery.fancybox.pack.js"></script>
+    <script src="~/Content/Template/assets/js/custom.js"></script>
+</body>
+</html>

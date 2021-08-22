@@ -1,0 +1,114 @@
+﻿@model Mvc_DooarsBangla.Models.AdminModel
+
+@{
+    ViewBag.Title = "UpdateAdminProfile";
+    Layout = "~/Views/Shared/_myLayoutPage_Admin.cshtml";
+}
+
+<div class="jumbotron" style="background-color:#f5fffa">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <center><legend><h2>Update Admin Details</h2></legend></center>
+            <table style="width:50%" align="center">
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.adminID)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBox("adminID", (int)ViewBag.id, new { @class = "form-control", @readonly = "readonly" })
+
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;"> @Html.ValidationMessageFor(model => model.adminID)</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.adminName)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBox("adminName", (string)ViewBag.name, new { @class = "form-control", placeholder = "*Eg. Rabin Sharma" })
+
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;"> @Html.ValidationMessageFor(model => model.adminName)</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.mobileNo)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBox("mobileNo", (string)ViewBag.mbl, new { @class = "form-control", placeholder = "*Enter 10 digit mobile number" })
+                        </div>
+
+                    </td>
+                    <td>
+                        <b style="color:red;">@Html.ValidationMessageFor(model => model.mobileNo)</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.adminEmailID)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBox("adminEmailID", (string)ViewBag.email, new { @class = "form-control", placeholder = "e.g. example@gmail.com" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">@Html.ValidationMessageFor(model => model.adminEmailID)</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.adminStatus)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @*@Html.TextBox("adminStatus", (string)ViewBag.email, new { @class = "form-control", placeholder = "e.g. example@gmail.com" })*@
+                            @Html.DropDownList("adminStatus", ViewBag.lst as List<SelectListItem>, new { @class = "form-control" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">@Html.ValidationMessageFor(model => model.adminStatus)</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <p>
+                            <input type="submit" class="btn btn-primary" value="Update" />
+
+                        </p>
+                    </td>
+                </tr>
+
+
+
+            </table>
+        </fieldset>
+    }
+
+</div>

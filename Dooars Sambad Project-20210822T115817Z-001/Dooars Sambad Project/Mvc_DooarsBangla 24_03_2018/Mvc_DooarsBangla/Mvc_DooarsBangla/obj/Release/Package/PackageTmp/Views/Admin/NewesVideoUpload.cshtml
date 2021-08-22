@@ -1,0 +1,103 @@
+﻿@model Mvc_DooarsBangla.Models.NewsVideoModel
+
+@{
+    ViewBag.Title = "NewesVideoUpload";
+    Layout = "~/Views/Shared/_myLayoutPage_Admin.cshtml";
+}
+
+
+<script>
+    $(document).on('invalid-form.validate', 'form', function () {
+        var button = $(this).find('input[type="submit"]');
+        setTimeout(function () {
+            button.removeAttr('disabled');
+        }, 1);
+    });
+    $(document).on('submit', 'form', function () {
+        var button = $(this).find('input[type="submit"]');
+        setTimeout(function () {
+            button.attr('disabled', 'disabled');
+        }, 0);
+    });
+</script>
+
+
+
+
+<div class="jumbotron" style="background-color:#f5fffa">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <center> <legend><h2>Upload Video IFrame</h2></legend></center>
+
+            <table class="g-margin-b-50--xs" align="center" style="width:70%">
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NewsID)
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBox("NewsID", (String)ViewBag.NewsID, new { @class = "form-control", @readonly = "readonly" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.NewsID)
+                        </b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Section)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.DropDownList("Section", ViewBag.Sect as List<SelectListItem>, new { @class = "form-control" })
+
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">
+                            @Html.ValidationMessageFor(model => model.Section)
+                        </b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.IFrameAddress)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.IFrameAddress, new { @class = "form-control", @placeholder = "Max 500 Character" })
+
+                        </div>
+                    </td>
+                    <td><b style="color:red;">@Html.ValidationMessageFor(model => model.IFrameAddress)</b></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input class="btn-primary" type="submit" value="Submit" />
+                        <a href="@Url.Action("Skip","Admin")" class="btn btn-green g-pull-right--xs">Skip</a>
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </fieldset>
+    }
+    </div>

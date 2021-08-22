@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Mvc_DooarsBangla.Models.MarqueeModel>
+
+@{
+    ViewBag.Title = "GetAllMarqueeNews";
+    Layout = "~/Views/Shared/_myLayoutPage_Admin.cshtml";
+}
+
+
+
+<div class="jumbotron" style="background-color:#f5fffa">
+    <center>
+        <h2 style="margin-bottom:25px">Marquee News List</h2>
+        <div style="overflow-x:scroll;width:100%">
+            <table class="table table-hover table-bordered" style="width:70%;">
+                <tr>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.MarqueeNewsID)
+                        </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.MarqueeDescription)
+                    </th>
+                    <th>Visibility</th>
+                    <th>Upload News</th>
+                    <th>Link to Scroller News</th>
+                </tr>
+
+                @foreach (var item in Model)
+                 {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MarqueeDescription)
+                    </td>
+                    @if (item.MarqueeStatus == "Invisible")
+                    {
+                        <td style="color:blue;">
+                            @*@Html.ActionLink("Make Visible", "MakeMarqueeVisible", new { @Class = "btn btn-primary", id = item.MarqueeNewsID, @Style="color:blue;" })*@
+                            <a style="color:blue;" href="@Url.Action("MakeMarqueeVisible","Admin")">Make Visible</a>
+                        </td>
+                    }
+
+                    @if (item.MarqueeStatus == "Visible")
+                    {
+                        <td style="color:blue;">
+                            @*@Html.ActionLink("Make Invisible", "MakeMarqueeInvisible", new { @Class = "btn btn-primary", id = item.MarqueeNewsID })*@
+                            <a style="color:blue;" href="@Url.Action("MakeMarqueeInvisible", "Admin")">Make Invisible</a>
+                        </td>
+                    }
+                    <td style="color:blue;">
+                        <a style="color:blue;" href="@Url.Action("UploadMarqueeFullNews", "Admin", new { marqueeID = item.MarqueeNewsID }) " >Upload News</a>
+                    </td>
+                    <td style="color:blue;">
+                        <a style="color:blue;" href="@Url.Action("LinkMarqueeToScroller", "Admin", new { marqueeID = item.MarqueeNewsID }) ">Link Scroller</a>
+                    </td>
+                </tr>
+                 }
+                    
+            </table>
+        </div>
+    </center>
+</div>

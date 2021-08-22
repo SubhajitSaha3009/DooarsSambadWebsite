@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Mvc_DooarsBangla.Models.AddFeedBackModel>
+
+@{
+    ViewBag.Title = "ShowAllFeedback";
+    Layout = "~/Views/Shared/_myLayoutPage_Admin.cshtml";
+}
+<div class="jumbotron" style="background-color:#f5fffa">
+    <center>
+
+        <i style="font-size:24px; color:green">@ViewBag.delmsg</i>
+        <i style="font-size:24px; color:red">@ViewBag.delerrmsg</i>
+        <div style="height:5px;"> </div>
+    </center>
+
+
+    <center>
+        <h2>All Feedback</h2>
+        <div style="height:25px;"></div>
+        <div style="overflow-x:scroll;width:100%">
+            <table class="table table-hover table-bordered " style="width:70%;">
+                <tr>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.feedbackID)
+                        </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.contactNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Message)
+                    </th>
+                    <th colspan="2" style="text-align:center">Action</th>
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.feedbackID)
+                            </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.contactNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Message)
+                        </td>
+
+                        @if (item.feedbackStatus == "Invisible")
+                        {
+                            <td>
+                                @*@Html.ActionLink("Make Visible", "VisibleFeedback", new { @Class = "btn btn-primary", id = item.FeedbackID })*@
+                                <a style="color:blue;" href="@Url.Action("VisibleFeedback", "Admin", new { id = item.FeedbackID })">Make Visible</a>
+                            </td>
+                        }
+
+                        @if (item.feedbackStatus == "Visible")
+                        {
+                            <td>
+                                @*@Html.ActionLink("Make Invisible", "InvisibleFeedback", new { @Class = "btn btn-primary", id = item.FeedbackID })*@
+                                <a style="color:blue;" href="@Url.Action("InvisibleFeedback", "Admin", new { id = item.FeedbackID })">Make Invisible</a>
+                            </td>
+                        }
+                        <td>
+                            @*@Html.ActionLink("Delete", "DeleteFeedback", new { @Class = "btn btn-primary", id = item.FeedbackID }, new { onclick = "return confirm('Are sure wants to delete?');" })*@
+                            <a style="color:blue;" href="@Url.Action("DeleteFeedback", "Admin",new { id=item.FeedbackID})" onclick="return confirm('Are you sure to delete the Feedback?');">Delete</a>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </center>
+</div>

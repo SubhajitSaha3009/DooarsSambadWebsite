@@ -1,0 +1,86 @@
+﻿@model Mvc_DooarsBangla.Models.MyCustomEpaperModel
+
+@{
+    ViewBag.Title = "E_paper";
+    Layout = "~/Views/Shared/_myLayout_Home.cshtml";
+}
+
+<style type="text/css">
+    .active{
+
+    }
+</style>
+
+<section id="contentSection">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="left_content">
+                <div class="single_page">
+                    <div role="tabpanel" class="tab-pane hidden-xs" id="navbar">
+                                @for (int i = 1; i <= Convert.ToInt32(@ViewBag.c); i++)
+                                {
+                                    if (i == @Model.PaperImage.PageNumber)
+                                    {
+                                        <button class="btn btn-theme"><a style="color:white;" href="@Url.Action("E_paper", "Home", new { pNo = i })">Page- @i</a></button>
+                                    }
+                                    else
+                                    {
+                                        <button class=""><a href="@Url.Action("E_paper", "Home", new { pNo = i })">Page- @i</a></button>
+                                    }
+                                }
+
+                    </div>
+                  
+                    <a href="@Model.PaperImage.ImageAddress" download="@Model.PaperImage.PageNumber" target="_blank"><img style="width:100%;height:100%" class="img-thumbnail" src="@Model.PaperImage.ImageAddress" /></a>
+                    <div role="tabpanel" class="tab-pane visible-xs" id="navbar">
+
+                        @for (int i = 1; i <= Convert.ToInt32(@ViewBag.c); i++)
+                        {
+                            if (i == @Model.PaperImage.PageNumber)
+                            {
+                                <button class="btn btn-theme"><a style="color:white;" href="@Url.Action("E_paper", "Home", new { pNo = i })">Page- @i</a></button>
+                            }
+                            else
+                            {
+                                <button class=""><a href="@Url.Action("E_paper", "Home", new { pNo = i })">Page- @i</a></button>
+                            }
+                        }
+
+                    </div>
+
+                    <div class="social_link">
+                        <ul class="sociallink_nav">
+                            @*<li><a href="https://www.facebook.com/DooarsSambad/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/DooarsSambad"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="mailto:dooarssambad@gmail.com"><i class="fa fa-google"></i></a></li>*@
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <aside class="right_content">
+                <div class="single_sidebar">
+                    <h2 class="g-font-weight--600"><span>আকর্ষনীয় খবর</span></h2>
+                    <ul class="spost_nav">
+                        @foreach (var item in Model.PopularList)
+                        {
+                            <li>
+                                <div class="media wow fadeInDown">
+                                    <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="media-left"> <img alt="" src="@Html.DisplayFor(modelItem => item.Section1ImageString)"> </a>
+                                    <div class="media-body"> <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="catg_title"> @Html.DisplayFor(modelItem => item.NewsTitle)</a> </div>
+                                </div>
+                            </li>
+                        }
+
+
+                    </ul>
+                </div>
+
+
+            </aside>
+        </div>
+    </div>
+</section>

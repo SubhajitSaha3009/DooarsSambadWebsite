@@ -1,0 +1,69 @@
+﻿@model Mvc_DooarsBangla.Models.AdminModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_myLayoutPage_Admin.cshtml";
+}
+<div class="jumbotron" style="background-color:#f5fffa">
+
+    <i style="font-size:24px; color:green">@ViewBag.ps</i>
+    <fieldset>
+        <center><legend><h2>Admin Profile</h2></legend></center>
+        <table align="center" style="width:40%">
+            <tr>
+                <td>
+                    <div class="display-label">
+                        <b style="font-size:17px">   @Html.DisplayNameFor(model => model.adminID)</b>
+                    </div>
+                </td>
+                <td>
+                    <div class="display-field">
+                        <i>@Html.DisplayFor(model => model.adminID)</i>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="display-label">
+                        <b style="font-size:17px">  @Html.DisplayNameFor(model => model.adminName)</b>
+                    </div>
+                </td>
+                <td>
+                    <div class="display-field">
+                        <i>@Html.DisplayFor(model => model.adminName)</i>
+                    </div>
+                </td>
+
+            <tr>
+                <td>
+                    <div class="display-label">
+                        <b style="font-size:17px">  @Html.DisplayNameFor(model => model.mobileNo)</b>
+                    </div>
+                </td>
+                <td>
+
+                    <div class="display-field">
+                        <i>@Html.DisplayFor(model => model.mobileNo)</i>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="display-label">
+                        <b style="font-size:17px"> @Html.DisplayNameFor(model => model.adminEmailID)</b>
+                    </div>
+                </td>
+                <td>
+                    <div class="display-field">
+                        <i style="color:blue">@Html.DisplayFor(model => model.adminEmailID)</i>
+                    </div>
+                </td>
+
+            </tr>
+
+        </table>
+    </fieldset>
+
+</div>

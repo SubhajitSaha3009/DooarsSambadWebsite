@@ -1,0 +1,133 @@
+﻿@model Mvc_DooarsBangla.Models.AddFeedBackModel
+
+
+
+<script>
+    function sentFeedback() {
+        alert("Record updated successfully!");
+        location.reload(true);
+    }
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#submitButton").on("click", function (e) {
+            var res = document.getElementById('fdName').value;
+            var num = document.getElementById('fdContactNumber').value;
+            var msg = document.getElementById('fdMessage').value;
+            var re = /^[a-z A-Z]+$/;
+
+            if ((res == "") || isNaN(res) || (num < 1111111111) || (num > 9999999999) || (num == "") || (msg == "") || (!res.match(re))) {
+                if ((res == "") || (!res.match(re))) {
+                    e.preventDefault();
+                    alert("invalid Name");
+                }
+
+                else {
+                    if (Math.floor(num) != num || isNaN(num) || (num < 1111111111) || (num > 9999999999) || (num == "")) {
+                        e.preventDefault();
+                        alert("Invalid  phone number");
+                    }
+                    else {
+                        if ((res != "") && (num != "")) {
+                            if ((msg == "")) {
+                                e.preventDefault();
+                                alert("Invalid feedback(Minimum 70 character)");
+                            }
+                        }
+
+                    }
+                }
+
+
+
+            }
+        });
+    });
+</script>
+
+
+
+    @using (Html.BeginForm(@*"SendFeedbackForm", "Home", new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.InsertBefore, UpdateTargetId = "show", OnSuccess = "sentFeedback" }*@))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+@*@using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <div class="contact_area">
+            <h2>Contact Us</h2>
+
+                <input type="text" name="Name" id="fdName" class="form-control " placeholder="* Full Name" required maxlength="20">
+                <b style="color:red;">   @Html.ValidationMessageFor(model => model.Name)</b>
+                <br/>
+                <input type="text" name="contactNumber" id="fdContactNumber" class="form-control "  placeholder="* Contact Number" required maxlength="10">
+                <b style="color:red;"> @Html.ValidationMessageFor(model => model.contactNumber)</b>
+                <br />
+
+            <textarea name="Message" id="fdMessage" class="form-control " rows="10" placeholder="* What do you feel about us?" required maxlength="140"></textarea>
+                <b style="color:red;"> @Html.ValidationMessageFor(model => model.Message)</b>
+                <br />
+                <input type="submit" value="Send Message" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 ">
+            @*<button type="submit" id="submitButton" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs">Submit</button>
+
+
+        </div>
+*@
+
+
+
+
+
+
+
+
+
+
+
+    <fieldset class="contact_form">
+        <legend><h2>FeedBack Details</h2></legend>
+
+
+
+        @*<div class="editor-label">
+                @Html.LabelFor(model => model.Name)
+            </div>*@
+        <div class="form-control">
+            @*@Html.EditorFor(model => model.Name)*@
+            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", placeholder = "*Name" })
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        @*<div class="form-control">
+                @Html.LabelFor(model => model.Email)
+            </div>*@
+        <div class="form-control">
+            @*@Html.EditorFor(model => model.Email)*@
+            @Html.TextBoxFor(model => model.contactNumber, new { @class = "form-control", placeholder = "*Email ID" })
+            @Html.ValidationMessageFor(model => model.contactNumber)
+        </div>
+
+        @*<div class="form-control">
+                @Html.LabelFor(model => model.Message)
+            </div>*@
+        <div class="form-control">
+            @*@Html.EditorFor(model => model.Message)*@
+            @Html.TextBoxFor(model => model.Message, new { @class = "form-control", placeholder = "*Your Message" })
+            @Html.ValidationMessageFor(model => model.Message)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+
+
+
+
+
+    }
+

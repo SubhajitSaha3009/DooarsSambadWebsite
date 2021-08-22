@@ -1,0 +1,21 @@
+﻿/*************************************************subha 12/11/2017**************************************/
+
+.Scroll {
+   overflow-y: scroll;
+   overflow-x:hidden;
+}
+
+.Scroll::-webkit-scrollbar{
+    width: 8px;
+}
+.Scroll::-webkit-scrollbar-thumb{
+    border-radius:10px;
+    background-color:#d083cf;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0,.3);
+}
+.Scroll::-webkit-scrollbar-track{
+    border-radius:10px;
+    /*background-color:black;*/
+    box-shadow: inset 0 0 6px rgba(0, 0, 0,.3);
+}
+

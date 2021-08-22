@@ -1,0 +1,117 @@
+﻿@model Mvc_DooarsBangla.Models.MycustomForFeedBackModel
+
+@{
+    ViewBag.Title = "ContactUS";
+    Layout = "~/Views/Shared/_myLayout_Home.cshtml";
+}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+        $("#btn_sendFeedback").click(function () {
+           // alert("abc")
+            var url = "/Home/SendFeedbackForm/"
+
+            $.get(url, function (data) {
+                $("#fd").html(data);
+            })
+
+        });
+    });
+</script>
+
+
+<section id="newsSection">
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="latest_newsarea">
+                <span>একনজরে</span>
+                <ul id="ticker01" class="news_sticker">
+                    @foreach (var item in Model.MarqueeList)
+                    {
+                        <li><a href="@Url.Action("MarqueeRedirection", "Home", new { mID = item.MarqueeNewsID })">@Html.DisplayFor(modelItem => item.MarqueeDescription, new { @color = "white" })</a></li>
+                    }
+                </ul>
+                <div class="social_area">
+                    <ul class="social_nav">
+                        <li class="facebook"><a href="https://www.facebook.com/DooarsSambad/" target="_blank"></a></li>
+                        <li class="twitter"><a href="https://twitter.com/DooarsSambad" target="_blank"></a></li>
+                        <li class="youtube"><a href="https://www.youtube.com/channel/UCxBXuQEVgUDYfdv_QV1hLpA?disable_polymer=true" target="_blank"></a></li>
+                        <li class="mail"><a href="mailto:dooarssambad@gmail.com" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contentSection">
+    <div class="row">
+        @*<div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="left_content" id="fd">
+               
+
+                <a class="btn btn-orange" id="btn_sendFeedback">Send a feedback</a>
+            </div>
+        </div>*@
+
+
+
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="row" id="fd">
+                <div class="col-xs-10 col-xs-offset-1 g-padding-y-5--xs">
+                    <div class="single_sidebar">
+                        <h2 class="g-text-center--xs g-margin-b-50--xs g-font-weight--600">
+                            <span>সম্পাদকীয়</span>
+                        </h2>
+                    </div>
+                    <div class="row hidden-xs">
+                        <img class=" img-thumbnail pull-left g-margin-b-20--sm g-margin-r-20--sm" style="width:30%;height:30%;" src="~/Content/Template/images/bhaskar.jpg">
+
+                        <p class="" style="text-align:justify">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; কখনও উত্থান কখনও পতন কখনও উত্তাল কখনও বা ম্লান কখনও আন্দোলন কখনও মিলন - এই তো ডুয়ার্স। এমন একটি মাধ্যমের কথা মনে এল যা ডুয়ার্সের  ভাবনা-চিন্তা-ভূত-ভবিষ্যত-সংস্কৃতি-শিল্প​-অর্থনিতি যাবতীয় বিষয়কে অঙ্কুর থেকে তুলে আনবে খবরের শিরোনামে।
+
+                        </p>
+                    </div>
+                    <div class="visible-xs">
+                        <center><img class="row g-margin-b-20--sm g-margin-r-20--sm" style="width:40%;height:40%;" src="~/Content/Template/images/bhaskar.jpg"></center>
+                        <p class="row g-text-center--xs g-font-size-34--xs g-font-weight--700" style="color:">BHASKAR SHARMA</p>
+                        <p class="row" style="text-align:justify">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; কখনও উত্থান কখনও পতন কখনও উত্তাল কখনও বা ম্লান কখনও আন্দোলন কখনও মিলন - এই তো ডুয়ার্স। এমন একটি মাধ্যমের কথা মনে এল যা ডুয়ার্সের  ভাবনা-চিন্তা-ভূত-ভবিষ্যত-সংস্কৃতি-শিল্প​-অর্থনিতি যাবতীয় বিষয়কে অঙ্কুর থেকে তুলে আনবে খবরের শিরোনামে।
+
+                        </p>
+
+                    </div>
+                </div>
+                <p class="g-text-center--xs pull-left g-font-size-30--xs g-font-weight--700 g-margin-l-100--lg g-margin-b-50--lg  hidden-xs" style="color:purple">BHASKAR SHARMA</p>
+                <center><a class="btn btn-primary g-radius--10 g-margin-b-50--xs" id="btn_sendFeedback">Leave a feedback</a></center>
+            </div>
+            
+            <div class="left_content" id="fd">
+                
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <aside class="right_content">
+                <div class="single_sidebar">
+                    <h2 class="g-font-weight--600"><span>আকর্ষনীয় খবর</span></h2>
+                    <ul class="spost_nav">
+                        @foreach (var item in Model.PopularList)
+                        {
+                            <li>
+                                <div class="media wow fadeInDown">
+                                    <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="media-left"> <img alt="" src="@Html.DisplayFor(modelItem => item.Section1ImageString)"> </a>
+                                    <div class="media-body"> <a href="@Url.Action("BriefNews", "Home", new { id = item.NewsID })" class="catg_title"> @Html.DisplayFor(modelItem => item.NewsTitle)</a> </div>
+                                </div>
+                            </li>
+                        }
+
+
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>

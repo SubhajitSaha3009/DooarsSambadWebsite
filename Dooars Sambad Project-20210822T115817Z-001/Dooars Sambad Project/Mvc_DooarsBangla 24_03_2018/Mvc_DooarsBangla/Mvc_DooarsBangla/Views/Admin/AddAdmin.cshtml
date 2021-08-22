@@ -1,0 +1,107 @@
+﻿@model Mvc_DooarsBangla.Models.AdminModel
+
+@{
+    ViewBag.Title = "AddAdmin";
+    Layout = "~/Views/Shared/_myLayoutPage_Admin.cshtml";
+}
+
+<script>
+    $(document).on('invalid-form.validate', 'form', function () {
+        var button = $(this).find('input[type="submit"]');
+        setTimeout(function () {
+            button.removeAttr('disabled');
+        }, 1);
+    });
+    $(document).on('submit', 'form', function () {
+        var button = $(this).find('input[type="submit"]');
+        setTimeout(function () {
+            button.attr('disabled', 'disabled');
+        }, 0);
+    });
+</script>
+
+
+
+
+
+
+<div class="jumbotron" style="background-color:#f5fffa">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+    <center>
+        <fieldset>
+            <legend><h2><b>ENTER ADMIN DETAILS</b></h2></legend>
+
+            <table style="width:50%">
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.adminName)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.adminName, new { @class = "form-control", placeholder = "*Eg. Rabin Sharma" })
+
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;"> @Html.ValidationMessageFor(model => model.adminName)</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.mobileNo)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.mobileNo, new { @class = "form-control", placeholder = "*Enter 10 digit mobile number" })
+                        </div>
+
+                    </td>
+                    <td>
+                        <b style="color:red;">@Html.ValidationMessageFor(model => model.mobileNo)</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.adminEmailID)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.adminEmailID, new { @class = "form-control", placeholder = "e.g. example@gmail.com" })
+                        </div>
+                    </td>
+                    <td>
+                        <b style="color:red;">@Html.ValidationMessageFor(model => model.adminEmailID)</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <p>
+                            <input type="submit" class="btn btn-primary" value="Add Admin" />
+
+                        </p>
+                    </td>
+                </tr>
+
+
+
+            </table>
+
+
+        </fieldset>
+    </center>
+    }
+
+</div>
